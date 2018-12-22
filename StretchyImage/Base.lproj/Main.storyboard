@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,86 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StretchyImage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-dB-hT2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JYh-mT-TCg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-WA-Kdt">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-pk-37j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-MD-TZj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="1125" height="200"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1449424256_3-zarubin-ussr-new-year-cards" translatesAutoresizingMaskIntoConstraints="NO" id="TWP-Lm-9nf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5c1cf31f402be088327080" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-J8-Smj">
+                                                                        <rect key="frame" x="375" y="0.0" width="375" height="200"/>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c467124c-d17d-4fe3-90e5-46053fabe4c2" translatesAutoresizingMaskIntoConstraints="NO" id="hok-B7-ymJ">
+                                                                        <rect key="frame" x="750" y="0.0" width="375" height="200"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="dbk-MD-TZj" firstAttribute="height" secondItem="WgM-pk-37j" secondAttribute="height" id="aAs-Wy-pee"/>
+                                                            <constraint firstItem="dbk-MD-TZj" firstAttribute="leading" secondItem="WgM-pk-37j" secondAttribute="leading" id="cqy-EI-0Y5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="dbk-MD-TZj" secondAttribute="bottom" id="g5x-tj-Fvw"/>
+                                                            <constraint firstItem="dbk-MD-TZj" firstAttribute="top" secondItem="WgM-pk-37j" secondAttribute="top" id="w2L-0p-PvJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dbk-MD-TZj" secondAttribute="trailing" id="wkU-ev-6cf"/>
+                                                        </constraints>
+                                                    </scrollView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.87450980389999999" green="0.090196078430000007" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="WgM-pk-37j" firstAttribute="leading" secondItem="9MH-WA-Kdt" secondAttribute="leading" id="1Az-7t-dLY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WgM-pk-37j" secondAttribute="trailing" id="6eN-bO-dgs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="WgM-pk-37j" secondAttribute="bottom" id="8rb-hO-Vs0"/>
+                                                    <constraint firstAttribute="height" constant="200" id="U0e-xO-b2S"/>
+                                                    <constraint firstItem="WgM-pk-37j" firstAttribute="height" relation="greaterThanOrEqual" secondItem="9MH-WA-Kdt" secondAttribute="height" id="f7o-wd-1SI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-a8-dmE">
+                                                <rect key="frame" x="0.0" y="200" width="375" height="1000"/>
+                                                <color key="backgroundColor" red="0.99607843139999996" green="0.84705882349999995" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1000" id="jeE-zL-hYK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JYh-mT-TCg" firstAttribute="top" secondItem="QfE-dB-hT2" secondAttribute="top" id="0tv-7C-xKx"/>
+                                    <constraint firstAttribute="bottom" secondItem="JYh-mT-TCg" secondAttribute="bottom" id="MJp-c2-QUg"/>
+                                    <constraint firstAttribute="trailing" secondItem="JYh-mT-TCg" secondAttribute="trailing" id="Ten-UH-6Mf"/>
+                                    <constraint firstItem="JYh-mT-TCg" firstAttribute="leading" secondItem="QfE-dB-hT2" secondAttribute="leading" id="mVE-Uy-pEK"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QfE-dB-hT2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0b8-MM-FHZ"/>
+                            <constraint firstItem="WgM-pk-37j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eoe-8k-gkV"/>
+                            <constraint firstItem="QfE-dB-hT2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JeB-jE-lpH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QfE-dB-hT2" secondAttribute="trailing" id="NlL-kp-KcO"/>
+                            <constraint firstItem="TWP-Lm-9nf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U9K-yt-iFv"/>
+                            <constraint firstItem="JYh-mT-TCg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aLs-4e-xXU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QfE-dB-hT2" secondAttribute="bottom" id="gOm-tD-FwT"/>
+                            <constraint firstItem="hok-B7-ymJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kPy-X5-DKl"/>
+                            <constraint firstItem="ehy-J8-Smj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rWF-Gh-A8S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -21,4 +100,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="1449424256_3-zarubin-ussr-new-year-cards" width="1700" height="1200"/>
+        <image name="5c1cf31f402be088327080" width="770" height="433"/>
+        <image name="c467124c-d17d-4fe3-90e5-46053fabe4c2" width="800" height="400"/>
+    </resources>
 </document>
